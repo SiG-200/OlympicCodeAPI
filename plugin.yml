@@ -1,0 +1,4 @@
+name: OlympicCodeAPI
+version: 3.0
+main: xyz.olympiccode.plugins.API.IOlympicCode
+depend: [Vault]
