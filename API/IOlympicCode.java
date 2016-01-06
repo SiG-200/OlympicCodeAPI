@@ -1,8 +1,9 @@
 package xyz.olympiccode.plugins.API;
 
 import net.milkbowl.vault.economy.Economy;
-import xyz.olympiccode.plugins.API.Funções.ActionBar;
-import xyz.olympiccode.plugins.API.Funções.Updater;
+import sun.security.action.GetLongAction;
+import xyz.olympiccode.plugins.API.FunÃ§Ãµes.ActionBar;
+import xyz.olympiccode.plugins.API.FunÃ§Ãµes.Updater;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.RegisteredServiceProvider;
@@ -39,10 +40,10 @@ public class IOlympicCode extends JavaPlugin {
     @SuppressWarnings("deprecation")
 	@Override
 	public void onEnable() {
-        System.out.print("Habilitando outras APIs");
+    	getLogger().info("Habilitando outras APIs");
         setupEconomy();
 
-        System.out.print("Carregando OlympicCodeAPI");
+        getLogger().info("Carregando OlympicCodeAPI");
 
         ActionBar.nmsver = Bukkit.getServer().getClass().getPackage().getName();
         ActionBar.nmsver = ActionBar.nmsver.substring(ActionBar.nmsver.lastIndexOf(".") + 1);
@@ -66,7 +67,7 @@ public class IOlympicCode extends JavaPlugin {
         OlympicCodeAPI.getItemBuilder();
         OlympicCodeAPI.getIConomy();
         
-        System.out.print("OlympicCodeAPI foi habilitado com sucesso!");
+        getLogger().info("OlympicCodeAPI foi habilitado com sucesso!");
     }  
     
 }
